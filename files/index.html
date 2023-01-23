@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>auth</title>
+    <link rel="stylesheet" href="./files/style.css" />
+  </head>
+  <body>
+    <form
+      method="POST"
+      id="signin"
+      action="/auth"
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 auto;
+      "
+    >
+      <input type="text" name="email" id="email" />
+      <input type="text" name="password" id="password" />
+      <input type="submit" value="SignIn" />
+    </form>
+    <form action="/post" method="post" id="jsonForm">
+      <button type="submit">JSON</button>
+    </form>
+    <script>
+      const email = document.querySelector("#email");
+      const pass = document.querySelector("#password");
+      const form = document.querySelector("#signin");
+      form.addEventListener("submit", (e) => {
+        document.cookie = `username=${email.value}; max_age=172800`;
+        document.cookie = `pass=${pass.value}; max_age=172800`;
+      });
+      const formJson = document.querySelector("#jsonForm");
+      formJson.addEventListener("submit", () => {
+        const string = '{"filename":"file1","content":"infoAboutFileName"}';
+      });
+    </script>
+  </body>
+</html>

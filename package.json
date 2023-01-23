@@ -1,0 +1,25 @@
+{
+    "name": "easy_http",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Zlandars/easy_http.git"
+    },
+    "keywords": [],
+    "author": "Eugen",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Zlandars/easy_http/issues"
+    },
+    "homepage": "https://github.com/Zlandars/easy_http#readme",
+    "devDependencies": {
+      "cookie-parser": "^1.4.6"
+    }
+  }
